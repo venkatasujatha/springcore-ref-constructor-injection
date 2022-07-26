@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean name="cer" class="com.example.demo.constructorinjection.Certificate">
+        
+        <constructor-arg value="java certificate">
+        
+        
+        </constructor-arg>
+        
+        </bean>
+        
+        
+        <bean name="person" class="com.example.demo.constructorinjection.Person">
+        
+        <constructor-arg>
+        <value>sujatha</value>
+        </constructor-arg>
+        
+        <constructor-arg  type="int">
+        <value>12</value>
+        
+        </constructor-arg>
+        
+        <constructor-arg ref="cer">
+        
+       </constructor-arg>
+        
+        <constructor-arg>
+        <list>
+        <value>java is good</value>
+        <value>python is easy</value>
+        <value>java and python are popular programming languages</value>
+        
+        </list>
+        
+        
+        </constructor-arg>
+        </bean>
+        
+        
+
+     </beans>
